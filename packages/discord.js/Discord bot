@@ -1,0 +1,16 @@
+ import discord
+    from discord.ext import commands
+
+    # Replace with your bot's token
+    bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
+
+
+    @bot.event
+    async def on_ready():
+        print(f'Logged in as {bot.user.name}')
+
+    @bot.command()
+    async def hello(ctx):
+        await ctx.send('Hello!')
+
+    bot.run('MTM1ODE0MDg2Njk1MDA3NDM5OA.G2L6s2.I6ygiPGnPkXSuE-7D9qudYBImg6nei-h7ICdQU')
